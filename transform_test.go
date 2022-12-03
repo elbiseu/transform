@@ -9,7 +9,7 @@ import (
 )
 
 func TestScale(t *testing.T) {
-	file1, err := os.Open("48934279448_ea28959a86_o.jpg")
+	file1, err := os.Open("testdata/48934279448_ea28959a86_o.jpg")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -18,7 +18,7 @@ func TestScale(t *testing.T) {
 		log.Fatal(err)
 	}
 	file1.Close()
-	file2, err := os.Open("output.jpg")
+	file2, err := os.Open("testdata/output.jpg")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -39,7 +39,7 @@ func TestScale(t *testing.T) {
 		wantErr bool
 	}{
 		{
-			name: "Sony",
+			name: "RX100 VI",
 			args: args{
 				img: srcImg,
 				x:   10,
